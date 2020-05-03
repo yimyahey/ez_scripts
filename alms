@@ -1,0 +1,31 @@
+#####RUN FROM remote_frameset.jsp in IE
+
+
+
+API_1484_11.dataModelInterface.root.containers.cmi.elements.scaled_passing_score.writeable=true;
+r=0; while(r < 0.8 || r > 1){ r=Math.floor((Math.random() * 100))/100; }
+
+API_1484_11.SetValue("cmi.scaled_passing_score", 0.8); 
+API_1484_11.SetValue("cmi.score.scaled", r); 
+API_1484_11.SetValue("cmi.completion_status", "completed"); 
+API_1484_11.SetValue("cmi.success_status", "passed"); 
+API_1484_11.SetValue("cmi.score.raw", r*100); 
+API_1484_11.SetValue("adl.nav.request", "continue");
+API_1484_11.SetValue("cmi.core.lesson_status","completed");
+API_1484_11.Commit();
+
+
+OR
+
+API_1484_11.dataModelInterface.root.containers.cmi.elements.scaled_passing_score.writeable=true;
+
+r=0; while(r < 0.8 || r > 1){ r=Math.floor((Math.random() * 100))/100; }
+
+API_1484_11.SetValue("cmi.scaled_passing_score", 0.8); 
+API_1484_11.SetValue("cmi.score.scaled", r); 
+API_1484_11.SetValue("cmi.completion_status", "completed"); 
+API_1484_11.SetValue("cmi.success_status", "passed"); 
+API_1484_11.SetValue("cmi.score.raw", r*100); 
+API_1484_11.SetValue("adl.nav.request", "continue");
+
+API_1484_11.completeUserSession(true);
