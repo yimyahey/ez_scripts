@@ -1,0 +1,1 @@
+document.getElementById("videoPlayer").currentTime = (document.getElementById("videoPlayer").duration - 1)
